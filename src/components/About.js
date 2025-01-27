@@ -20,8 +20,12 @@ const About = () => {
             />
           </h1>
           <div className="contact-info">
-            <p><FaLinkedin /> <a href="https://www.linkedin.com/in/vitaliy-aleksyuk-13b466235" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-            <p><FaGithub /><a href="https://gitlab.com/JustNova" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+            <a href="https://www.linkedin.com/in/vitaliy-aleksyuk-13b466235" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="contact-icon" />
+            </a>
+            <a href="https://gitlab.com/JustNova" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="contact-icon" />
+            </a>
           </div>
           <h2 className="section-title">About Me</h2>
           <p className="section-description">
