@@ -1,7 +1,7 @@
 const Projects = () => {
   return (
-    <section id="projects" className="projects">
-      <h2>Projects</h2>
+    <section id="projects" className="projects projects-box">
+      <h2 className="section-title">Projects</h2>
       <div className="project">
         <h3>Course Manager Web App</h3>
         <p>Developed using Python Flask, Jinja, and Git.</p>

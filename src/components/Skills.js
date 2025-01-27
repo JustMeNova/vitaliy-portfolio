@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
-    <section id="skills" className="skills">
-      <h2>Skills</h2>
+    <section id="skills" className="skills skills-box">
+      <h2 className="section-title">Skills</h2>
       <ul>
         <li>C#</li>
         <li>Python</li>

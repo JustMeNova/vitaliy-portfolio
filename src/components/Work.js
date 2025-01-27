@@ -1,7 +1,7 @@
 const Work = () => {
   return (
-    <section id="work" className="work">
-      <h2>Work Experience</h2>
+    <section id="work" className="work work-box">
+      <h2 className="section-title">Work Experience</h2>
       <h3>Bank Of Montreal – Customer Service Representative</h3>
       <p>January 2024 – Present</p>
       <ul>
