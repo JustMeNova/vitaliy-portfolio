@@ -1,18 +1,19 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-import { FaPhone, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import '../styles/global.css';
+import profileImage from '../assets/images/image0.jpg';
 
 const About = () => {
   return (
     <section id="about" className="about">
       <div className="about-box">
-        <div className="profile-placeholder">Image</div>
+        <div className="profile-container"><img src={profileImage} alt="Profile" className="profile-image" /></div>
         <div className="about-content">
           <h1 className="name">
             <Typewriter 
               words={['Vitaliy Aleksyuk', 'Full Stack Developer', 'Vitaliy Aleksyuk']} 
-              loop={2} // Infinite loop on the words 
+              loop={2} 
               cursor
               cursorStyle="_"
               typeSpeed={70}
