@@ -6,6 +6,7 @@ const Work = () => {
       <h2 className="section-title">Work Experience</h2>
 
       {/* Job 1 */}
+      <div className="work-experience-container">
       <div className="work-experience">
         <div className="work-header">
           <h3 className="work-position">
@@ -21,6 +22,7 @@ const Work = () => {
         <ul className="work-details">
           <li>Assisted customers with day-to-day banking needs.</li>
           <li>Helped clients navigate banking products and services.</li>
+          <li>Resolved customer inquiries and issues in a timely manner.</li>
         </ul>
       </div>
 
@@ -34,7 +36,7 @@ const Work = () => {
           <div className="timeline">
             <span className="timeline-date">June 2022</span>
             <span className="timeline-line"></span>
-            <span className="timeline-date">Present</span>
+            <span className="timeline-date">January 2024</span>
           </div>
         </div>
         <ul className="work-details">
@@ -42,6 +44,7 @@ const Work = () => {
           <li>Maintained records of bookings, payments, and guest details.</li>
           <li>Coordinated with housekeeping to ensure guest satisfaction.</li>
         </ul>
+      </div>
       </div>
     </section>
   );

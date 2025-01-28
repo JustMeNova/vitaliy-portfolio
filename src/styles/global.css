@@ -193,7 +193,9 @@ section {
 }
 
 section:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Lift the section */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add a shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for shadow and lift */
 }
 
 /* Pseudo-element for animated gradient border */
@@ -377,7 +379,12 @@ html {
 
 .skills-list li:hover {
   transform: translateY(-10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add a shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for shadow and lift */
+  
+}
+.skills-list li:hover i {
+  color: #ffffff; /* Change the icon color when the parent <li> is hovered */
 }
 
 .skills-list li::before {
@@ -399,8 +406,27 @@ html {
 
 .skills-list i {
   font-size: 3rem; /* Make the icons larger */
+  width: 100px; /* Ensure the icons are centered */
   margin-bottom: 10px;
-  color: #22d3ee;
+  color: transparent; /* Make the icon color transparent */
+  background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);; /* Gradient */
+  background-size: 300% 300%; /* Make the gradient large for smooth animation */
+  -webkit-background-clip: text; /* Clip the gradient to the icon's text */
+  -webkit-mask: linear-gradient(#fff, #fff); /* Ensure the mask is applied to the icon shape */
+  animation: gradientColorShift 3s infinite linear; /* Animate the gradient */
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientColorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .skills {
   position: relative;
@@ -483,7 +509,27 @@ html {
   font-size: 1.2rem;
   color: #9ca3af;
 }
+@media (max-width: 768px) {
+  .project-item {
+    padding: 15px; /* Reduce padding for smaller screens */
+    width: 90%; /* Limit project width */
+    margin: 15px auto; /* Center projects with proper spacing */
+  }
 
+  .project-image {
+    max-width: 100%; /* Ensure the image fills available space */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .project-item h3 {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    margin-bottom: 8px;
+  }
+
+  .project-item p {
+    font-size: 1rem; /* Keep description readable on mobile */
+  }
+}
 /* Work Section Title */
 .work .section-title {
   font-size: 1.8rem;
@@ -538,7 +584,6 @@ html {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 300px; /* Optional: Limit the timeline width */
   margin-top: 10px;
 }
 
